@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
 
-# I defined my own function to calculate power of an integer
-# Instead of using cmath library
-int calculate_power(int base, int exponent){
+// I defined my own function to calculate power of an integer
+// Instead of using cmath library
+int calculate_power(int base, int exponent)
+{
 	int result = 1;
 	for(int i=0;i<exponent;i++){
 		result *= base;
@@ -11,7 +12,8 @@ int calculate_power(int base, int exponent){
 	return result;
 }
 
-int BinaryToDecimal(string binary){
+int BinaryToDecimal(string binary)
+{
 	int exponent=0;
 	int decimal_number=0;
 	for(int i=binary.length()-1;i>=0;i--){
@@ -24,17 +26,21 @@ int BinaryToDecimal(string binary){
 }
 
 
-int main() {
+int main() 
+{
 	int T;
 	string binaryString;;
 	cin>>T;
-	for(int t=0;t<T;t++){
+	for(int t=0;t<T;t++)
+	{
 		cin>>binaryString;
 		int number=BinaryToDecimal(binaryString);
-		if(number%3 == 0){
+		if(number%3 == 0)
+		{
 			cout<<1<<endl;
 		}
-		else{
+		else
+		{
 			cout<<0<<endl;
 		}
 	}
